@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"c:/Users/User/OneDrive/Desktop/ChatGPT Image Apr 25, 2026, 04_29_04 PM.png\" \"C:/Users/User/SheRide/client/src/assets/logo-card.png\")",
+      "Bash(cp \"c:/Users/User/OneDrive/Desktop/ChatGPT Image Apr 25, 2026, 04_29_04 PM1.png\" \"C:/Users/User/SheRide/client/src/assets/bus-hero.png\")",
+      "Bash(cp \"c:/Users/User/OneDrive/Desktop/ChatGPT Image Apr 25, 2026, 04_29_04 PM2.png\" \"C:/Users/User/SheRide/client/src/assets/women-travel.png\")",
+      "Bash(cp \"c:/Users/User/OneDrive/Desktop/ChatGPT Image Apr 25, 2026, 04_29_04 PM4.png\" \"C:/Users/User/SheRide/client/src/assets/hero-banner.png\")",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)",
+      "Bash(npm install *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173/login)",
+      "Bash(node src/server.js)",
+      "Bash(curl -s http://localhost:5000/health)",
+      "Bash(node testMail.js)"
+    ]
+  }
+}

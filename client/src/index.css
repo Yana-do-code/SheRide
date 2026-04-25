@@ -1,0 +1,95 @@
+/* ── Global Reset & Variables ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pink-50:  #fff0f6;
+  --pink-100: #fce4ec;
+  --pink-200: #f8bbd0;
+  --pink-300: #f48fb1;
+  --pink-400: #f06292;
+  --pink-500: #e91e8c;
+  --pink-600: #d81b60;
+  --pink-700: #c2185b;
+  --pink-800: #ad1457;
+  --pink-900: #880e4f;
+  --dark:     #1a0a12;
+  --gray:     #6b7280;
+  --light-gray: #f9fafb;
+  --white:    #ffffff;
+  --shadow-sm: 0 1px 3px rgba(233,30,140,0.08);
+  --shadow-md: 0 4px 16px rgba(233,30,140,0.12);
+  --shadow-lg: 0 8px 32px rgba(233,30,140,0.18);
+  --radius:   12px;
+  --radius-lg: 20px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; outline: none; }
+img { max-width: 100%; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Utility ── */
+.btn-primary {
+  background: linear-gradient(135deg, var(--pink-500), var(--pink-700));
+  color: var(--white);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-md);
+  display: inline-block;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--pink-600);
+  padding: 11px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid var(--pink-400);
+  transition: all 0.2s;
+  display: inline-block;
+}
+.btn-outline:hover {
+  background: var(--pink-500);
+  color: var(--white);
+  border-color: var(--pink-500);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+.section-title span { color: var(--pink-600); }
+
+.section-sub {
+  color: var(--gray);
+  font-size: 1.05rem;
+  margin-bottom: 48px;
+}
