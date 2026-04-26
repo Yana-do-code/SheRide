@@ -428,15 +428,18 @@
   background: var(--pink-50);
 }
 
-.cta-outline {
-  border-color: rgba(255,255,255,0.6);
-  color: white;
+.btn-outline.cta-outline {
+  background: white !important;
+  border-color: white !important;
+  color: var(--pink-700) !important;
 }
 
-.cta-outline:hover {
-  background: rgba(255,255,255,0.15);
-  border-color: white;
-  color: white;
+.btn-outline.cta-outline:hover {
+  background: var(--pink-50) !important;
+  border-color: var(--pink-50) !important;
+  color: var(--pink-700) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 /* ══════════════════════

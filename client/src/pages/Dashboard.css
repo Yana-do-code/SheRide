@@ -1,0 +1,261 @@
+/* ════════════════════════════════════
+   DASHBOARD PAGE
+   ════════════════════════════════════ */
+
+.dashboard-page {
+  min-height: 100vh;
+  padding-top: 88px;
+  padding-bottom: 60px;
+  background: var(--pink-50);
+}
+
+.dashboard-container {
+  max-width: 960px;
+}
+
+/* ── Hero card ── */
+.dashboard-hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, var(--pink-600), var(--pink-800));
+  border-radius: 20px;
+  padding: 32px 36px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 24px rgba(233,30,140,0.2);
+}
+
+.dashboard-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  border: 3px solid rgba(255,255,255,0.5);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dashboard-hero-name {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0 0 4px;
+}
+
+.dashboard-hero-email {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ── Grid layout ── */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Cards ── */
+.dashboard-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 2px 16px rgba(233,30,140,0.07);
+}
+
+.dashboard-card-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin: 0 0 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--pink-100);
+}
+
+/* ── Form ── */
+.dform-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 540px) {
+  .dform-row { grid-template-columns: 1fr; }
+}
+
+.dform-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+
+.dform-field label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--pink-700);
+}
+
+.dform-field input {
+  padding: 11px 14px;
+  border: 2px solid var(--pink-100);
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+  color: var(--dark);
+  background: var(--pink-50);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dform-field input:focus {
+  border-color: var(--pink-400);
+  box-shadow: 0 0 0 3px rgba(233,30,140,0.1);
+  background: white;
+}
+
+.dform-field input.error {
+  border-color: #e53e3e;
+  background: #fff5f5;
+}
+
+.dform-error {
+  font-size: 0.75rem;
+  color: #e53e3e;
+}
+
+.dform-divider {
+  font-size: 0.83rem;
+  font-weight: 700;
+  color: var(--pink-700);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  border-top: 2px solid var(--pink-100);
+  padding-top: 18px;
+  margin-bottom: 16px;
+}
+
+.dform-divider span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--gray);
+}
+
+.dform-submit-error {
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  color: #c53030;
+  margin-bottom: 16px;
+}
+
+.dform-success {
+  background: #f0fff4;
+  border: 1px solid #9ae6b4;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  color: #276749;
+  margin-bottom: 16px;
+}
+
+.dform-save-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--pink-500), var(--pink-700));
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.2s, transform 0.15s;
+  box-shadow: 0 4px 16px rgba(233,30,140,0.25);
+}
+
+.dform-save-btn:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.dform-save-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ── Info card ── */
+.dinfo-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--pink-50);
+}
+
+.dinfo-row:last-of-type {
+  border-bottom: none;
+}
+
+.dinfo-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--pink-400);
+}
+
+.dinfo-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark);
+  word-break: break-all;
+}
+
+.dinfo-note {
+  margin-top: 20px;
+  background: var(--pink-50);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 0.82rem;
+  color: var(--pink-700);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* reuse spinner from SeatSelection */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

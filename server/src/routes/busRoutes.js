@@ -6,4 +6,7 @@ const busController = require('../controllers/busController');
 // GET /buses?from=&to=&date=
 router.get('/', busController.getBuses);
 
+// GET /buses/:id
+router.get('/:id', busController.getBusById);
+
 module.exports = router;

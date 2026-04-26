@@ -221,10 +221,10 @@ function Home() {
         <div className="container cta-inner">
           <div className="cta-text">
             <h2>Ready for a Safer Journey?</h2>
-            <p>Join 50,000+ women who already travel with confidence.</p>
+            <p>Join 50+ women who already travel with confidence.</p>
           </div>
           <div className="cta-buttons">
-            <a href="/signup" className="btn-primary">Get Started Free</a>
+            <a href="/signup" className="btn-primary">Get Started</a>
             <a href="/results" className="btn-outline cta-outline">Search Buses</a>
           </div>
         </div>

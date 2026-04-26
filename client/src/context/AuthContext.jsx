@@ -1,33 +1,44 @@
-// client/src/context/AuthContext.jsx
-// Provides auth state (token, user) across the component tree
 import React, { createContext, useState, useContext } from 'react';
 
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-  const [token, setToken] = useState(() => localStorage.getItem('token'));
-  const [user, setUser] = useState(null);
+  const [token, setToken] = useState(() => localStorage.getItem('sheride_token'));
+  const [user,  setUser]  = useState(() => {
+    try {
+      const stored = localStorage.getItem('sheride_user');
+      return stored ? JSON.parse(stored) : null;
+    } catch {
+      return null;
+    }
+  });
 
   const login = (newToken, userData) => {
-    localStorage.setItem('token', newToken);
+    localStorage.setItem('sheride_token', newToken);
+    localStorage.setItem('sheride_user',  JSON.stringify(userData));
     setToken(newToken);
     setUser(userData);
   };
 
   const logout = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem('sheride_token');
+    localStorage.removeItem('sheride_user');
     setToken(null);
     setUser(null);
   };
 
+  const updateUser = (userData) => {
+    localStorage.setItem('sheride_user', JSON.stringify(userData));
+    setUser(userData);
+  };
+
   return (
-    <AuthContext.Provider value={{ token, user, login, logout }}>
+    <AuthContext.Provider value={{ token, user, login, logout, updateUser, isLoggedIn: !!token }}>
       {children}
     </AuthContext.Provider>
   );
 }
 
-// Custom hook for consuming auth context
 export function useAuth() {
   return useContext(AuthContext);
 }

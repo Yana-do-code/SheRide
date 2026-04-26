@@ -11,7 +11,7 @@ const api = axios.create({
 
 // Attach token from localStorage to every request if present
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem('sheride_token');
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
